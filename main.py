@@ -60,10 +60,10 @@ def save_password():
             data.update(new_data)  # updates new entry to existing file
             with open("password_data.json", "w") as file:
                 json.dump(data, file, indent=4)
-
-        # Clear the input fields
-        entry_website.delete(0, END)
-        entry_password.delete(0, END)
+        # clear entries
+        finally:
+            entry_website.delete(0, END)
+            entry_password.delete(0, END)
 
 
 def search_password():
